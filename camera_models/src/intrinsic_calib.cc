@@ -4,9 +4,9 @@
 #include <boost/program_options.hpp>
 #include <iomanip>
 #include <iostream>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 
 #include "camodocal/calib/CameraCalibration.h"
 #include "camodocal/chessboard/Chessboard.h"
@@ -274,7 +274,7 @@ main( int argc, char** argv )
                          0.5,
                          cv::Scalar( 255, 255, 255 ),
                          1,
-                         CV_AA );
+                         cv::LINE_AA );
             cv::imshow( "Image", cbImages.at( i ) );
             cv::waitKey( 0 );
         }
@@ -282,3 +282,4 @@ main( int argc, char** argv )
 
     return 0;
 }
+
